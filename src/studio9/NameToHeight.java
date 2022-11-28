@@ -19,7 +19,35 @@ public class NameToHeight {
 	 */
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-
+		
+		Map<String, Double> nameToHeight = new HashMap < >();
+		
+		nameToHeight.put("Amrita", 62.0);
+		nameToHeight.put("Ramya", 63.0);
+		nameToHeight.put("David", 71.0);
+		nameToHeight.put("Cai", 75.0);
+		
+		System.out.println("Enter in a name: ");
+		String name = in.next();
+		
+		
+		
+		while (!name.equals("quit")) {
+			
+			
+			if(nameToHeight.containsKey(name)) {
+				System.out.println("The height of " + name + " is " + nameToHeight.get(name));
+				
+			}
+			else {
+				System.out.println("Invalid name, no height associated.");
+				
+			}
+			
+			System.out.println("Enter in a name: ");
+			name = in.next();
+		}
+		
 		// FIXME
 		throw new NotYetImplementedException();
 
